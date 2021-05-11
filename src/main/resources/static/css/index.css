@@ -1,0 +1,90 @@
+html {
+    display: table;
+    margin: auto;
+}
+body {
+    background-color: aliceblue;
+    font-family: Arial, serif;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+h1 {
+    font-size: 2em;
+    color: #222;
+}
+h2 {
+    font-size: 1.8em;
+    color: #222;
+}
+a {
+    font-size: 1em;
+    color: cornflowerblue;
+    text-decoration: none;
+}
+a:hover {
+    color: darkblue;
+    cursor: pointer;
+}
+table {
+    background-color: aquamarine;
+    position: relative;
+    overflow: auto;
+    margin-bottom: 2em;
+    border-radius: 5px;
+}
+table tr,
+table th,
+table td {
+    margin: 0;
+    padding: 0.5em;
+}
+table tr:hover {
+    background-color: aliceblue;
+}
+table thead {
+    position: sticky;
+    top: 0;
+}
+table thead tr:hover {
+    background-color: aquamarine !important;
+}
+input[type="submit"],
+button {
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: aquamarine;
+    padding: 1em;
+    border: none;
+}
+input[type="submit"]:hover,
+button:hover {
+    background-color: cornflowerblue;
+    transition: background-color .2s ease-in-out;
+}
+label,
+input[type="text"],
+input[type="password"],
+input[type="checkbox"] {
+    font-size: 1.4em;
+    margin: 0.5em 0.25em;
+    border: none;
+}
+input[type="text"],
+input[type="password"],
+input[type="checkbox"] {
+    padding: 0.25em;
+    border-radius: 5px;
+    background-color: aquamarine;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="checkbox"]:focus {
+    border: none;
+    background-color: cornflowerblue;
+    transition: background-color .2s ease-in-out;
+}
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #555555;
+}

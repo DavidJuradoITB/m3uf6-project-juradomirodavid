@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Afegir Restaurant</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<!--<form method="post" action="#" th:action="@{/empleats/new/submit}" th:object="${empleatForm}">-->
+<form method="post" action="#" th:action="${restaurantForm.name!=''} ? @{/list/edit/submit}:@{/list/new/submit}" th:object="${restaurantForm}">
+    <!-- si el id == 0 és la primera vegada que utilitzo el form, per tant new Empleat -->
+    <!--si el id != 0 ja té valors, i envio per editar, modificar, substituir empleat -->
+
+    <h1 th:text="${restaurantForm.name!=''}?'Editar restaurant': 'Nou restaurant'">bla bla restaurant</h1>
+    Name <input type="text" id="name" placeholder="Restaurant name" th:field="*{name}" th:attrappend="readonly=${restaurantForm.name!=null}?'readonly':null"><br/>
+    Street <input type="text" id="street" placeholder="C/Aiguablava, 121, 08031" th:field="*{street}"><br/>
+    Genre <input type="text" id="genre" placeholder="Oriental, European,..." th:field="*{genre}"><br/>
+    Does delivery? <input type="checkbox" id="doesDelivery" th:field="*{doesDelivery}"><br/>
+    <button type="submit">Enviar</button>
+</form>
+</body>
+</html>
